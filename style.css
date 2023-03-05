@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e6e6e6;
+  font-family: Arial, sans-serif;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.heading1 {
+  text-align: center;
+  position: relative;
+  left: 50px;
+  margin-bottom: 20px;
+  animation: blinker 1s linear infinite;
+}
+
+.slideshow-container {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.mySlides {
+  display: none;
+  width: 50px;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.contact {
+  color: skyblue;
+}
+.contact-image {
+  width: 100%;
+  position: relative;
+  left: 20px;
+  flex: 2;
+  padding-left: 20px;
+  border-left: 1px solid black;
+}
+.contact-container {
+  width: 100%;
+  max-width: 800px;
+  height: 70px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  animation-name: dance;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .mySlides {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .heading1 h1 {
+    left: 0;
+  }
+
+  .mySlides {
+    width: 100%;
+  }
+
+  .prev,
+  .next {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .contact-image {
+    display: none;
+  }
+
+  .contact-container {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+  }
+}
+
+@keyframes dance {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 20px;
+  }
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
